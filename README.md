@@ -1,3 +1,5 @@
 # todo
 To-do list
-Well, some kind of trash
+Well, some kind of 
+
+Developer: haxmind

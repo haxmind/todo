@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Todos } from './Todos';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,20 +12,25 @@ class App extends React.Component {
     }
   }
 
-handleClick() {
-  this.setState({
-    counter: this.state.counter +1
-  });
-}
+
 
 render() {
-  return <div className="App">
-    <header className="App-header">
-      <p>
-      Сейчас счетчик равен: {this.state.counter}
-      </p>
-      <button type="button" onClick={this.handleClick.bind(this)} >Увеличить счетик</button>
-    </header>
+  const tasks = [
+    {
+      text: "По есть еду"
+    },
+    {
+      text: "Помытб посуду"
+    },
+    {
+      text: "Сделатб уроки"
+    },
+    {
+      text: "Поиглать в манкрафт"
+    }
+  ]
+  return <div>
+    <Todos tasks={tasks}></Todos>
     </div>;  
 }
 }

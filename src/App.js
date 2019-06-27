@@ -1,38 +1,89 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+
 import { Todos } from './Todos';
 
+
+
 class App extends React.Component {
+
   constructor(props) {
+
     super(props);
 
-    this.state = {
-      counter: 0
-    }
   }
 
 
 
-render() {
-  const tasks = [
-    {
-      text: "По есть еду"
-    },
-    {
-      text: "Помытб посуду"
-    },
-    {
-      text: "Сделатб уроки"
-    },
-    {
-      text: "Поиглать в манкрафт"
-    }
-  ]
-  return <div>
-    <Todos tasks={tasks}></Todos>
-    </div>;  
+  render() {
+
+    const tasks = [
+
+      {
+
+        id: 1,
+
+        text: 'Помыть посуду'
+
+      },
+
+      {
+
+        id: 2,
+
+        text: 'Вынести мусор'
+
+      },
+
+      {
+
+        id: 3,
+
+        text: 'Сделать уроки'
+
+      },
+
+      {
+
+        id: 4,
+
+        text: 'Поигратб в майнкрафт'
+
+      }
+
+    ];
+
+
+
+    return (
+
+      <div>
+
+        <div className="topbar">
+
+          <h1>Todo</h1>
+
+          <div className="sep"></div>
+
+          <a href="/">Главная</a>
+
+          <a href="#">О программе</a>
+
+        </div>
+
+        <Todos tasks={tasks}></Todos>
+
+        {/* Copyright (c) fourCraft LLC*/}
+
+      </div>
+
+    );
+
+  } 
+
 }
-}
+
+
 
 export default App;

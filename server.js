@@ -18,4 +18,4 @@ app.get('/todo', (request, response) => {
     ]);
 })
 
-app.listen(3050) //Я даун, привет, прилажение запускаедся на порту 3050
+app.listen(3050)

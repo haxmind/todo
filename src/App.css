@@ -26,8 +26,42 @@
 
 
 
+.topbar a {
+
+  font-size: 18px;
+
+  color: rgb(71, 70, 70);
+
+  text-decoration: underline;
+
+
+
+}
+
+
+
+.topbar a:not(:last-child) {
+
+  margin-right: 16px;
+
+}
+
+
+
 .sep {
 
   flex: 1;
+
+}
+
+
+
+.footer {
+
+  margin-top: 24px;
+
+  text-align: center;
+
+  color: #acacac;
 
 }

@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "express": "^4.17.1",
+    "inline-style-prefixer": "^4.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-modal-dialog": "Dean177/react-modal-dialog#support/bump-react",
     "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "server": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

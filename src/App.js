@@ -4,6 +4,10 @@ import './App.css';
 
 import { Todos } from './Todos';
 
+import { ModalContainer, ModalDialog } from 'react-modal-dialog';
+
+import { About } from './About';
+
 
 
 class App extends React.Component {
@@ -12,7 +16,39 @@ class App extends React.Component {
 
     super(props);
 
+
+
+    this.state = {
+
+      isShowingModal: false
+
+    }
+
   }
+
+
+
+  handleClick() {
+
+    this.setState({
+
+      isShowingModal: true
+
+    });
+
+  } 
+
+
+
+  handleClose() {
+
+    this.setState({
+
+      isShowingModal: false
+
+    });
+
+  } 
 
 
 
@@ -62,19 +98,39 @@ class App extends React.Component {
 
         <div className="topbar">
 
-          <h1>Todo</h1>
+          <h1>Simple Todo List</h1>
 
           <div className="sep"></div>
 
-          <a href="/">Главная</a>
+          <a href="/">Home</a>
 
-          <a href="#">О программе</a>
+          <a onClick={this.handleClick.bind(this)}>About APP</a>
 
         </div>
 
         <Todos tasks={tasks}></Todos>
 
-        {/* Copyright (c) fourCraft LLC*/}
+        <div className="footer">
+
+          Copyright © {(new Date()).getFullYear()} fourCraft LLC
+
+        </div>
+
+        {
+
+          this.state.isShowingModal &&
+
+          <ModalContainer onClose={this.handleClose.bind(this)}>
+
+          <ModalDialog onClose={this.handleClose.bind(this)}>
+
+            <About></About>
+
+          </ModalDialog>
+
+        </ModalContainer>
+
+        }
 
       </div>
 
